@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('C:\Users\Teju\Desktop\sprint2\src\img.png') no-repeat center center fixed;
+  background-size: cover; /* Ensure the background image covers the entire page */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5) ; /* Darken the background */
+  z-index: -1; /* Ensure the dark overlay is behind everything */
+ 
+}
+
+h1 {
+  text-align: center;
+  color: #fff; /* Change text color to white */
+  margin-top: 600px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #34db66; /* Change to light blue */
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Centering container */
+.container {
+  width: 90%;
+  max-width: 100%;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background for better readability */
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 2px solid #dbbc34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure content is on top */
+}
+
+/* Form Header - Add New Store */
+.add-store-header {
+  color: #db9834; /* Light blue for Add New Store */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Header */
+.header {
+  
+  color: rgb(253, 120, 120);
+  padding: 20px 0;
+  text-align: center;
+   margin-top: 40px;
+  
+}
+
+/* Footer */
+.footer {
+  background-color: #f57d5f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 30px;
+  border-top: 3px solid #34495e;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Button Styles */
+button {
+  background-color: #db3434;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 2px solid transparent;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #2980b9;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  background: rgba(236, 240, 241, 0.9); /* Transparent form background */
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #95a5a6;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #34dba9;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Store List Styling */
+.store {
+  background-color: rgba(241, 239, 236, 0.9);
+  border: 2px solid #7ec4f3;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+}
+
+.store:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-color: #0b8fe7;
+}
+
+.store h3 {
+  margin: 0;
+  color: #095e97; /* Light blue for Available Stores */
+  font-size: 1.5rem;
+}
+
+.store p {
+  color: #7f8c8d;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.no-stores {
+  text-align: center;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.store {
+  animation: fadeIn 0.5s ease-out;
+}
+
+button {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
